@@ -8,6 +8,12 @@ This folder now contains a browser-based tower control game inspired by classic 
 2. Click **Start new shift** to begin a timed three-minute session.
 3. Click an aircraft to select it, then issue commands with the keyboard (`L` to land, `H` to hold) or the sidebar buttons.
 
+## Testing the gameplay logic
+
+1. Install Node.js dependencies from the repo root: `npm install`
+2. Run the Jest suite to exercise the core tower-control rules: `npm test`
+3. The tests validate spawn pacing, runway reservations, hold assignments, and collision handling without requiring a browser.
+
 ## Gameplay overview
 
 - Aircraft spawn at the edges of the radar scope and fly toward a single runway.

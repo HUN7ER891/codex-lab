@@ -698,4 +698,49 @@ class Game {
   }
 }
 
-new Game();
+function initializeGame() {
+  const game = new Game();
+  if (typeof window !== "undefined") {
+    window.runwayRushGame = game;
+  }
+  return game;
+}
+
+const RunwayRushExports = {
+  MessageLog,
+  Plane,
+  Game,
+  initializeGame,
+  randomRange,
+  distance,
+  lerp,
+  constants: {
+    CENTER,
+    APPROACH_FIX,
+    RUNWAY_THRESHOLD,
+    RUNWAY_EXIT,
+    RUNWAY_CLEAR_POINT,
+    HOLD_RADIUS,
+    SHIFT_DURATION,
+    MAX_STRIKES,
+    SPAWN_INTERVAL,
+    PLANE_TYPES,
+    ENTRY_VECTORS,
+  },
+};
+
+if (typeof window !== "undefined") {
+  window.RunwayRush = RunwayRushExports;
+  if (typeof module === "undefined" || !module.exports) {
+    const startGame = () => initializeGame();
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", startGame, { once: true });
+    } else {
+      startGame();
+    }
+  }
+}
+
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = RunwayRushExports;
+}
