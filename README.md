@@ -15,7 +15,7 @@ Build an AI-powered content aggregation system that curates, processes, and tran
 ## Repo Structure
 ```
 backend/          # Python or Node.js backend code
-frontend/         # Runway Rush browser prototype (2D ATC game)
+frontend/         # Runway Rush browser game (2D ATC shift simulator)
 data_pipeline/    # Data pipeline scripts
 README.md         # Project overview (this file)
 .gitignore        # Ignore unnecessary files
