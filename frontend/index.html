@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Runway Rush - 2D ATC Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="game-panel">
+        <canvas
+          id="game"
+          width="900"
+          height="600"
+          aria-label="Runway Rush radar display"
+        ></canvas>
+        <div id="overlay" class="overlay hidden" role="alert" aria-live="assertive"></div>
+      </section>
+      <aside class="sidebar">
+        <h1>Runway Rush</h1>
+        <p class="tagline">
+          Keep arrivals safe, manage holds, and protect the runway during a three-minute tower shift.
+        </p>
+        <section class="status" aria-live="polite">
+          <p><strong>Score:</strong> <span id="score">0</span></p>
+          <p><strong>Landings:</strong> <span id="landings">0</span></p>
+          <p>
+            <strong>Shift Time:</strong>
+            <span id="shift-time" data-total="180">0:00</span>
+          </p>
+          <p>
+            <strong>Runway:</strong>
+            <span id="runway-status" data-state="clear">Clear</span>
+          </p>
+          <p><strong>Strikes:</strong> <span id="strikes">0</span> / 3</p>
+          <p><strong>Active Aircraft:</strong> <span id="aircraft-count">0</span></p>
+        </section>
+        <section class="instructions">
+          <h2>How to play</h2>
+          <ul>
+            <li>Click an aircraft to select it. Selected aircraft show a cyan halo.</li>
+            <li>Press <kbd>L</kbd> or use the command button to clear the aircraft to land.</li>
+            <li>Press <kbd>H</kbd> or use the command button to send it back into the hold.</li>
+            <li>
+              Maintain separation: the runway becomes reserved once a clearance is issued and frees up when the
+              aircraft vacates.
+            </li>
+            <li>Complete the full three-minute shift with fewer than three strikes to win.</li>
+          </ul>
+          <div class="command-buttons" role="group" aria-label="Command buttons">
+            <button id="command-land" data-command="land" type="button">Clear to land (L)</button>
+            <button id="command-hold" data-command="hold" type="button">Assign hold (H)</button>
+          </div>
+        </section>
+        <section class="tips">
+          <h2>Tips</h2>
+          <ul>
+            <li>Heavy jets require more runway time and award the most points.</li>
+            <li>Issue clearances only when the runway status is <em>Clear</em>.</li>
+            <li>Use the log to track events, warnings, and runway availability.</li>
+          </ul>
+        </section>
+        <section class="log" aria-live="polite">
+          <h2>ATC log</h2>
+          <ol id="log" class="log-list"></ol>
+        </section>
+        <button id="restart" class="restart" type="button">Start new shift</button>
+      </aside>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>

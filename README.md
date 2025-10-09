@@ -15,7 +15,7 @@ Build an AI-powered content aggregation system that curates, processes, and tran
 ## Repo Structure
 ```
 backend/          # Python or Node.js backend code
-frontend/         # React frontend (modern UI/UX)
+frontend/         # Runway Rush browser game (2D ATC shift simulator)
 data_pipeline/    # Data pipeline scripts
 README.md         # Project overview (this file)
 .gitignore        # Ignore unnecessary files
@@ -33,6 +33,7 @@ LICENSE           # Licensing info
 2. Decide your backend language (Python/Node/Both)
 3. Install dependencies (see respective folders)
 4. Start backend, then frontend
+   - For the Runway Rush prototype, simply open `frontend/index.html` in a modern browser to play the latest build.
 5. Begin building and iterating with Codex
 
 ## Codex Usage

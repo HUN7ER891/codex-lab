@@ -1,0 +1,27 @@
+{
+  "name": "codex-lab",
+  "version": "1.0.0",
+  "description": "Build an AI-powered content aggregation system that curates, processes, and transforms AI news into business-ready insights and social media content for thought leadership.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "jest-canvas-mock": "^2.5.2",
+    "jest-environment-jsdom": "^30.2.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFiles": [
+      "jest-canvas-mock"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest.setup.js"
+    ]
+  }
+}
