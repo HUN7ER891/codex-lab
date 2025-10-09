@@ -33,6 +33,7 @@ LICENSE           # Licensing info
 2. Decide your backend language (Python/Node/Both)
 3. Install dependencies (see respective folders)
 4. Start backend, then frontend
+   - For the Runway Rush prototype, simply open `frontend/index.html` in a modern browser to play the latest build.
 5. Begin building and iterating with Codex
 
 ## Codex Usage
