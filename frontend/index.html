@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Runway Rush - 2D ATC Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="game-panel">
+        <canvas id="game" width="900" height="600" aria-label="Runway Rush game board"></canvas>
+        <div id="overlay" class="overlay hidden" role="alert" aria-live="assertive"></div>
+      </section>
+      <aside class="sidebar">
+        <h1>Runway Rush</h1>
+        <p class="tagline">Keep the skies safe by sequencing arrivals onto a busy runway.</p>
+        <section class="status" aria-live="polite">
+          <p><strong>Score:</strong> <span id="score">0</span></p>
+          <p><strong>Strikes:</strong> <span id="strikes">0</span> / 3</p>
+          <p><strong>Active Aircraft:</strong> <span id="aircraft-count">0</span></p>
+        </section>
+        <section class="instructions">
+          <h2>How to play</h2>
+          <ul>
+            <li>Click an aircraft to select it. Selected aircraft show a cyan halo.</li>
+            <li>Press <kbd>L</kbd> to clear a selected aircraft to land.</li>
+            <li>Press <kbd>H</kbd> to order the selected aircraft to hold.</li>
+            <li>Prevent mid-air collisions and land aircraft to score points.</li>
+            <li>You earn one strike for each collision or runway incursion without clearance. Three strikes ends the shift.</li>
+          </ul>
+        </section>
+        <section class="tips">
+          <h2>Tips</h2>
+          <ul>
+            <li>Stagger clearances so aircraft have separation on final approach.</li>
+            <li>Holding patterns keep aircraft safe while you manage the runway.</li>
+            <li>Use the mini heads-up display above aircraft for their current state.</li>
+          </ul>
+        </section>
+        <button id="restart" class="restart" type="button">Start new shift</button>
+      </aside>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
