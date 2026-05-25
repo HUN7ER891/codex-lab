@@ -1,40 +1,43 @@
-# AI Content Aggregator (Private Build)
+# Operator Kit Lite
 
-## Purpose
-Build an AI-powered content aggregation system that curates, processes, and transforms AI news into business-ready insights and social media content for thought leadership.
+Operator Kit Lite is a local-first, no-backend web app for practical AI operator workflows. It provides two focused tools: a Prompt Vault and an Agent Risk Ledger.
 
-## Key Features
-- Real-time content ingestion (RSS, web, social)
-- Intelligence processing & relevance scoring
-- Business impact extraction
-- Automated executive summaries
-- Multi-platform social content generation
-- Analytics and trend analysis
-- Professional, dashboard-style React frontend
-
-## Repo Structure
-```
-backend/          # Python or Node.js backend code
-frontend/         # React frontend (modern UI/UX)
-data_pipeline/    # Data pipeline scripts
-README.md         # Project overview (this file)
-.gitignore        # Ignore unnecessary files
-LICENSE           # Licensing info
+## Install
+```bash
+npm install
 ```
 
-## Tech Stack
-- React (frontend)
-- Python 3.11+ or Node.js (backend)
-- OpenAI Codex for codegen/iteration
-- Docker (recommended for local dev)
+## Run (dev)
+```bash
+npm run dev
+```
 
-## Getting Started
-1. Clone the repo (private)
-2. Decide your backend language (Python/Node/Both)
-3. Install dependencies (see respective folders)
-4. Start backend, then frontend
-5. Begin building and iterating with Codex
+## Build
+```bash
+npm run build
+```
 
-## Codex Usage
-This repo is intended for use with OpenAI Codex to rapidly co-build, prototype, and refactor features.  
-Document your prompts and workflows for best results.
+## Features
+- Vite + React + TypeScript single-page app.
+- Dark, responsive, operator-style interface.
+- Local storage persistence with no external services.
+- **Prompt Vault**
+  - Create, edit, delete prompts.
+  - Search (title/body/tags/use case/notes).
+  - Filter by category and sort by newest/oldest/title.
+  - Copy prompt body.
+  - Import/export prompts as JSON.
+  - Includes 5 starter prompts.
+- **Agent Risk Ledger**
+  - Create, edit, delete risk assessments.
+  - Search and filter by risk score.
+  - Copy markdown risk report.
+  - Import/export assessments as JSON.
+- Basic JSON import validation and empty-state messaging.
+
+## Future Improvements
+- Add richer validation for imported data shape.
+- Add optional CSV export.
+- Add selectable views (compact/table mode).
+- Add audit timeline and archived entries.
+- Add keyboard shortcuts for power users.
